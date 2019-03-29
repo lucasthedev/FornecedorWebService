@@ -1,4 +1,4 @@
-package fornecedor.data;
+package com.lucas.fornec.ws;
 
 public class Fornecedor {
 	private int id;
