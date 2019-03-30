@@ -22,7 +22,7 @@ public class FornecedorDAO {
 	public int inserir(Fornecedor fornec) throws SQLException, ClassNotFoundException{
 		int id = 0;
 		
-		String sqlQuery = "INERT INTO fornecedor (nome, email, comentario, cnpj) VALUES (?,?,?,?) RETURNING id";
+		String sqlQuery = "INSERT INTO fornecedor (nome, email, comentario, cnpj) VALUES (?,?,?,?) RETURNING id";
 		
 		try {
 			PreparedStatement stmt = this.conexao.getConexao().prepareStatement(sqlQuery);
@@ -48,7 +48,7 @@ public class FornecedorDAO {
 	}
 	
 	public int alterar(Fornecedor fornec) throws SQLException, ClassNotFoundException{
-		String sqlQuery = "UPDATE chamado SET nome = ?, email = ?, comentario = ?, cnpj = ? WHERE id = ?";
+		String sqlQuery = "UPDATE fornecedor SET nome = ?, email = ?, comentario = ?, cnpj = ? WHERE id = ?";
 		int linhasAfetadas = 0;
 		
 		try {
