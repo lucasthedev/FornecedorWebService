@@ -73,7 +73,7 @@ public class FornecedorDAO {
 	}
 	
 	public List<Fornecedor> listar() throws SQLException, ClassNotFoundException{
-		String sqlQuery = "SELECT id, nome, email, comentario, cnpj FROM fornecedor";
+		String sqlQuery = "SELECT id, nome, email, comentario, cnpj FROM fornecedor ORDER BY nome";
 		
 		try {
 			PreparedStatement stmt = this.conexao.getConexao().prepareStatement(sqlQuery);
